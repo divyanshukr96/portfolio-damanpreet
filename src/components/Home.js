@@ -3,25 +3,37 @@ import * as PropTypes from "prop-types";
 import logo from '../logo.svg'
 import '../App.css'
 
+import ImageSlider from './ImageSlider';
+import ParallaxTest from './ParallaxTest';
+import ImageAndData from './ImageAndData';
+import {MDBContainer} from "mdbreact";
+import {Parallax} from 'react-parallax';
+import ParallaxEffect from './ParallaxEffect';
+import Footer from './Footer';
+
+const image1 =
+    "https://images.unsplash.com/photo-1498092651296-641e88c3b057?auto=format&fit=crop&w=1778&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D";
 class Home extends Component {
+
+
     render() {
         const {classes} = this.props;
         return (
             <div className="App">
-            <header className="App-header">
-              <img src={logo} className="App-logo" alt="logo" />
-              <p>
-                Edit <code>src/App.js</code> and save to reload.
-              </p>
-              <a
-                className="App-link"
-                href="https://reactjs.org"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Learn React
-              </a>
-            </header>
+
+
+                <ImageSlider/>
+
+                <ParallaxEffect/>
+
+
+                {/*<ParallaxTest/>*/}
+
+              <ImageAndData/>
+              <Footer/>
+
+
+
           </div>
         );
     }
