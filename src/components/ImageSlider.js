@@ -39,11 +39,11 @@ class ImageSlider extends Component {
 
             items={images}
             infinite={true}
-            showNav={true}//can be made true..need to think over it
+            showNav={false}//can be made true..need to think over it
             showFullscreenButton={false}//think over this too
             showPlayButton={false}
             showThumbnails={false}
-            autoPlay={false}//make this true when development is done
+            autoPlay={true}//make this true when development is done
             slideDuration={1500}
             slideInterval={5000}/>
         );
