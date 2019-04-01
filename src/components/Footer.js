@@ -1,7 +1,11 @@
 import React from "react";
 import {MDBCol, MDBContainer, MDBRow, MDBFooter, Animation, MDBAnimation} from "mdbreact";
+import {Link} from "react-router-dom";
 
-const Footer = () => {
+const Footer = (props) => {
+
+    const reveal = props.reveal;
+    console.log('thapli',reveal);
     return (
 
 
@@ -10,13 +14,15 @@ const Footer = () => {
                 <MDBContainer>
                     <MDBRow className="pt-5 mb-3 text-center d-flex justify-content-center">
                         <MDBCol md="2" className="b-3">
+
                             <h6 className="title font-weight-bold">
-                                <a href="#!">About us</a>
+                                <Link to={'/about'}> About </Link>
+
                             </h6>
                         </MDBCol>
                         <MDBCol md="2" className="b-3">
                             <h6 className="title font-weight-bold">
-                                <a href="#!">Gallery</a>
+                                <Link to={'/gallery'}> Gallery </Link>
                             </h6>
                         </MDBCol>
                         <MDBCol md="2" className="b-3">
@@ -52,7 +58,7 @@ const Footer = () => {
                     <MDBRow className="pb-3">
                         <MDBCol md="12">
                             <div className="mb-5 flex-center">
-                                <a className="fb-ic">
+                                <a className="fb-ic" href="https://www.facebook.com/harindernanrhay/" target="_blank">
                                     <i className="fab fa-facebook-f fa-lg white-text mr-md-4"> </i>
                                 </a>
                                 <a className="tw-ic">
@@ -66,7 +72,7 @@ const Footer = () => {
                                 <a className="li-ic">
                                     <i className="fab fa-linkedin-in fa-lg white-text mr-md-4"> </i>
                                 </a>
-                                <a className="ins-ic">
+                                <a className="ins-ic" href="https://www.instagram.com/harinder_nanrhay/" target="_blank">
                                     <i className="fab fa-instagram fa-lg white-text mr-md-4"> </i>
                                 </a>
                                 <a className="pin-ic">

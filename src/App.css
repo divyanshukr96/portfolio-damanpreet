@@ -19,6 +19,14 @@
   color: white;
 }
 
+.cursive{
+  font-family: 'Dancing Script', cursive;
+}
+
+.buttonright{
+  alignment: right;
+}
+
 .App-link {
   color: #61dafb;
 }
