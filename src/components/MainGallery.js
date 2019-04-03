@@ -2,6 +2,7 @@ import React from "react";
 import { MDBContainer, MDBRow, MDBCol } from "mdbreact";
 import Lightbox from "react-image-lightbox";
 import "./Lightbox.css";
+import Footer from './Footer';
 
 class MainGallery extends React.Component {
     state = {
@@ -43,7 +44,10 @@ class MainGallery extends React.Component {
     render() {
         const { photoIndex, isOpen, images } = this.state;
         return (
+            <div>
             <MDBContainer className="mt-5">
+                <h1 className="cursive my-8 text-center">My Gallery</h1>
+                <br/>
                 <div className="mdb-lightbox">
                     <MDBRow>
                         {this.renderImages()}
@@ -69,6 +73,10 @@ class MainGallery extends React.Component {
                     />
                 )}
             </MDBContainer>
+
+            <Footer reveal={true}/>
+
+            </div>
         );
     }
 }

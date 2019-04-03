@@ -1,5 +1,5 @@
 import React from "react";
-import { MDBContainer, MDBRow, MDBCol } from "mdbreact";
+import {MDBContainer, MDBRow, MDBCol, MDBBtn} from "mdbreact";
 import Lightbox from "react-image-lightbox";
 import "./Lightbox.css";
 
@@ -12,6 +12,7 @@ import Image6 from './../images/49.jpg';
 import Image7 from './../images/DSC_1311.jpg';
 import Image8 from './../images/DSC01871.jpg';
 import Image9 from './../images/DSC01916.jpg';
+import {Link} from "react-router-dom";
 
 
 
@@ -74,6 +75,14 @@ class LightboxPage extends React.Component {
                         Quidem, corporis at quae tempore nisi impedit cupiditate perferendis nesciunt, ex dolores doloremque!
                         Sit, rem, in?
                     </p>
+
+                    <MDBBtn className="buttonright" outline color="primary">
+                        <Link to={'/gallery'}>
+                            View Complete Gallery
+                        </Link>
+
+
+                    </MDBBtn>
                 </blockquote>
                 <div className="mdb-lightbox">
                     <MDBRow>
@@ -99,6 +108,8 @@ class LightboxPage extends React.Component {
                         }
                     />
                 )}
+
+
             </MDBContainer>
         );
     }
