@@ -1,48 +1,50 @@
 import React, {Component} from "react";
-import * as PropTypes from "prop-types";
-import logo from '../logo.svg'
 import '../App.css'
 
 import ImageSlider from './ImageSlider';
-import ParallaxTest from './ParallaxTest';
 import ImageAndData from './ImageAndData';
-import {MDBContainer} from "mdbreact";
-import {Parallax} from 'react-parallax';
 import ParallaxEffect from './ParallaxEffect';
 import Footer from './Footer';
-import AnimationPage from './AnimationPage';
-import Navbar from './Navbar';
+import axios from 'axios';
 
 import LighboxPage from './LightBoxPage';
 
-const image1 =
-    "https://images.unsplash.com/photo-1498092651296-641e88c3b057?auto=format&fit=crop&w=1778&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D";
 class Home extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            data: []
+        }
+    }
 
+
+    componentWillMount() {
+        axios.get('/api/home').then(res => {
+            this.setState({data: res.data})
+        })
+    }
 
     render() {
-        const {classes} = this.props;
+        const {data} = this.state;
         return (
             <div className="App">
 
                 {/*<Navbar/>*/}
 
-                <ImageSlider/>
+                <ImageSlider carousel={data.carousel}/>
 
-                <ParallaxEffect/>
+                <ParallaxEffect cover={data.cover} description={data.description}/>
 
                 <br/>
                 <br/>
 
                 {/*<ParallaxTest/>*/}
 
-              <ImageAndData/>
+              <ImageAndData image={data.layout}/>
 
-              <LighboxPage/>
+              <LighboxPage gallery={data.gallery}/>
 
               <Footer/>
-
-
 
 
           </div>

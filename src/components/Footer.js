@@ -1,11 +1,8 @@
 import React from "react";
-import {MDBCol, MDBContainer, MDBRow, MDBFooter, Animation, MDBAnimation} from "mdbreact";
+import {MDBCol, MDBContainer, MDBRow, MDBFooter, MDBAnimation} from "mdbreact";
 import {Link} from "react-router-dom";
 
-const Footer = (props) => {
-
-    const reveal = props.reveal;
-    console.log('thapli',reveal);
+const Footer = () => {
     return (
 
 
@@ -17,7 +14,6 @@ const Footer = (props) => {
 
                             <h6 className="title font-weight-bold">
                                 <Link to={'/about'}> About </Link>
-
                             </h6>
                         </MDBCol>
                         <MDBCol md="2" className="b-3">
@@ -58,24 +54,26 @@ const Footer = (props) => {
                     <MDBRow className="pb-3">
                         <MDBCol md="12">
                             <div className="mb-5 flex-center">
-                                <a className="fb-ic" href="https://www.facebook.com/harindernanrhay/" target="_blank">
+                                <a className="fb-ic" href="https://www.facebook.com/harindernanrhay/"
+                                   target="_blank" rel="noopener noreferrer">
                                     <i className="fab fa-facebook-f fa-lg white-text mr-md-4"> </i>
                                 </a>
-                                <a className="tw-ic">
+                                <a className="tw-ic" href='#!'>
                                     <i className="fab fa-twitter fa-lg white-text mr-md-4"> </i>
                                 </a>
-                                <a className="gplus-ic">
+                                <a className="gplus-ic" href="#!">
                                     <i className="fab fa-google-plus-g fa-lg white-text mr-md-4">
 
                                     </i>
                                 </a>
-                                <a className="li-ic">
+                                <a className="li-ic" href='#!'>
                                     <i className="fab fa-linkedin-in fa-lg white-text mr-md-4"> </i>
                                 </a>
-                                <a className="ins-ic" href="https://www.instagram.com/harinder_nanrhay/" target="_blank">
+                                <a className="ins-ic" href="https://www.instagram.com/harinder_nanrhay/"
+                                   target="_blank" rel="noopener noreferrer">
                                     <i className="fab fa-instagram fa-lg white-text mr-md-4"> </i>
                                 </a>
-                                <a className="pin-ic">
+                                <a className="pin-ic" href="#!">
                                     <i className="fab fa-pinterest fa-lg white-text"> </i>
                                 </a>
                             </div>
@@ -85,7 +83,7 @@ const Footer = (props) => {
                 <div className="footer-copyright text-center py-3">
                     <MDBContainer fluid>
                         &copy; {new Date().getFullYear()} Copyright:
-                        <a href="https://www.MDBootstrap.com"> xyz@something.com </a>
+                        <a href="/"> xyz@something.com </a>
                     </MDBContainer>
                 </div>
             </MDBFooter>

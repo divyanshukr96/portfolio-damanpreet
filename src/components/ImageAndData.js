@@ -1,101 +1,51 @@
 import React from "react";
 import {MDBContainer, MDBRow, MDBCol, MDBMask, MDBView, MDBAnimation} from "mdbreact";
-// import './index.css';
-import Image1 from './../images/HN.jpg';
+import * as PropTypes from "prop-types";
+import {isEmpty} from "lodash";
 
-
-
-const ImageAndData = () => {
+const ImageAndData = (props) => {
+    const {image} = props;
     return (
-         <MDBContainer fluid>
-            <MDBRow>
-                <MDBCol md="6" lg="6">
-                    <MDBAnimation revial type="fadeInUp" duration="2s">
-                        <MDBView hover zoom className="imagelanding">
-                            <img
-                                src={Image1}
-                                className="img-fluid"
-                                alt=""
-                                width={600}
-                                height={500}
-                            />
-                            <MDBMask className="flex-center">
-                                <p className="white-text">zoom effect</p>
-                            </MDBMask>
-                        </MDBView>
-                    </MDBAnimation>
-
-
-                </MDBCol>
-
-                <MDBCol lg="6" md="6" className="mb-4">
-
-                    <MDBAnimation reveal type="fadeInRight" duration="2s">
-                        <br/>
-                        <br/>
-                        <br/>
-                        <blockquote className="blockquote bq-primary">
-                            <p className="bq-title">Info notification</p>
-                            <p> Donec sed odio operae,
-                                eu vulputate felis rhoncus. Praeterea iter est quasdam res quas ex communi. At nos hinc posthac, sitientis
-                                piros Afros. Petierunt uti sibi concilium totius Galliae in diem certam indicere. Cras mattis iudicium
-                                purus sit amet fermentum.
-                                Spacing to be done here and multiple similar components will be here
-                            </p>
-                        </blockquote>
-                    </MDBAnimation>
-
-                </MDBCol>
-            </MDBRow>
-
-             <br/>
-             <br/>
-
-             <MDBRow>
-                 <MDBCol md="6" lg="6">
-
-                     <MDBAnimation reveal type="fadeInUp" duration="2s">
-                         <br/>
-                         <br/>
-                         <br/>
-                         <blockquote className="blockquote bq-primary">
-                             <p className="bq-title">Info notification</p>
-                             <p> Donec sed odio operae,
-                                 eu vulputate felis rhoncus. Praeterea iter est quasdam res quas ex communi. At nos hinc posthac, sitientis
-                                 piros Afros. Petierunt uti sibi concilium totius Galliae in diem certam indicere. Cras mattis iudicium
-                                 purus sit amet fermentum.
-                                 Spacing to be done here and multiple similar components will be here
-                             </p>
-                         </blockquote>
-                     </MDBAnimation>
-
-                 </MDBCol>
-
-                 <MDBCol lg="6" md="6" className="mb-4">
-
-                     <MDBAnimation revial type="fadeInRight" duration="2s">
-                         <MDBView hover zoom className="imagelanding">
-                             <img
-                                 src={Image1}
-                                 className="img-fluid"
-                                 alt=""
-                                 width={600}
-                                 height={500}
-                             />
-                             <MDBMask className="flex-center">
-                                 <p className="white-text">zoom effect</p>
-                             </MDBMask>
-                         </MDBView>
-                     </MDBAnimation>
-
-
-
-                 </MDBCol>
-             </MDBRow>
-
-
+        <MDBContainer fluid>
+            {!isEmpty(image) && image.map((data, index) => (
+                <MDBRow key={index} style={{alignItems: 'center', flexDirection: index % 2 ? 'row-reverse' : 'row'}}>
+                    <MDBCol md="6" lg="6">
+                        <MDBAnimation reveal type={index % 2 ? 'fadeInRight' : 'fadeInUp'} duration="2s">
+                            <MDBView hover zoom className="imagelanding">
+                                <img
+                                    src={`/image/${data.photo}`}
+                                    className="img-fluid"
+                                    style={{float: index % 2 ? null : 'right'}}
+                                    alt=""
+                                    width={600}
+                                    height={500}
+                                />
+                                <MDBMask className="flex-center">
+                                    {/*<p className="white-text">zoom effect</p>*/}
+                                </MDBMask>
+                            </MDBView>
+                        </MDBAnimation>
+                    </MDBCol>
+                    <MDBCol lg="6" md="6" className="mb-4">
+                        <MDBAnimation reveal type={index % 2 ? 'fadeInUp' : 'fadeInRight'} duration="2s">
+                            <blockquote className="blockquote bq-primary">
+                                <p className="bq-title">{data.title}</p>
+                                <p>{data.about}</p>
+                            </blockquote>
+                        </MDBAnimation>
+                    </MDBCol>
+                </MDBRow>
+            ))}
         </MDBContainer>
     );
-}
+};
+
+ImageAndData.propTypes = {
+    image: PropTypes.array.isRequired,
+};
+
+ImageAndData.defaultProps = {
+    image: []
+};
 
 export default ImageAndData;

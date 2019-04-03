@@ -4,9 +4,9 @@ import {setCurrentUser} from "../actions/authActions";
 if (process.env.NODE_ENV !== 'production') {
     // axios.defaults.baseURL = "http://10.1.130.32:81";
 
-    // axios.defaults.baseURL = "http://172.21.16.108:81";
+    // axios.defaults.baseURL = "http://172.21.17.169:8000";
     
-    // axios.defaults.baseURL = "http://127.0.0.1:81";
+    // axios.defaults.baseURL = "http://127.0.0.1:8000";
 }
 
 export default {
@@ -14,7 +14,7 @@ export default {
         axios.interceptors.response.use(response => {
             return response;
         }, error => {
-            switch (error.response.status) {
+            switch (error.response && error.response.status) {
                 case 401:
                     localStorage.removeItem('token');
                     store.dispatch(setCurrentUser({}));
