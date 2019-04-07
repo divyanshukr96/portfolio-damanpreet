@@ -15,10 +15,10 @@ const About = () => {
                             <MDBView hover zoom className="imagelanding">
                                 <img
                                     src={Logo}
-                                    className="img-fluid"
                                     alt=""
-                                    width={700}
-                                    height={600}
+                                    width={600}
+                                    height={400}
+                                    style={{padding:80,marginLeft:20}}
                                 />
                             </MDBView>
                         </MDBAnimation>
@@ -32,7 +32,7 @@ const About = () => {
                             <br/>
                             <br/>
                             <br/>
-                            <blockquote className="blockquote bq-primary">
+                            <blockquote className="blockquote bq-warning">
                                 <p className="bq-title">HSN photography</p>
                                 <p> Donec sed odio operae,
                                     eu vulputate felis rhoncus. Praeterea iter est quasdam res quas ex communi. At nos hinc posthac, sitientis

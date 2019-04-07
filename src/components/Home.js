@@ -8,6 +8,7 @@ import Footer from './Footer';
 import axios from 'axios';
 
 import LighboxPage from './LightBoxPage';
+import AppBar from "@material-ui/core/AppBar";
 
 class Home extends Component {
     constructor(props) {
@@ -29,7 +30,10 @@ class Home extends Component {
         return (
             <div className="App">
 
-                {/*<Navbar/>*/}
+
+
+
+                <Navbar />
 
                 <ImageSlider carousel={data.carousel}/>
 

@@ -36,3 +36,8 @@ code {
   width:100px;
 }
 
+.aboutbq {
+  border-left: 3px solid #e0ad5c ; }
+.aboutbq .bqtitle {
+  color: #e08d5c ; }
+

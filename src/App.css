@@ -21,6 +21,23 @@
 
 .cursive{
   font-family: 'Dancing Script', cursive;
+  color: #e0ad5c;
+}
+
+.bar{
+  display:flex;
+  flex-direction:row;
+  justify-content: space-around;
+  align-items:center;
+  position:absolute;
+  width:100%;
+  z-index: 100;
+  color: #e0ad5c;
+}
+
+.bar .h1{
+  color: #e0ad5c;
+  text-decoration-color: #e0ad5c;
 }
 
 .buttonright{

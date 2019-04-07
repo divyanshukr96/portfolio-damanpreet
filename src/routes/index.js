@@ -15,7 +15,7 @@ const routes = (
                 <Route path="/dashboard" component={AdminRoute}/>
                 <Route path="/gallery" component={MainGallery}/>
                 <Route path="/about" component={About}/>
-              {/*  <Route path="/contactform" component={ContactForm}/>*/}
+             {/*   <Route path="/contactform" component={ContactForm}/>*/}
             </Switch>
         </App>
     </Router>
