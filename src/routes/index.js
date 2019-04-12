@@ -5,6 +5,7 @@ import Home from "../components/Home";
 import MainGallery from '../components/MainGallery';
 import AdminRoute from "./admin";
 import About from '../components/About';
+import ContactForm from '../components/ContactForm';
 
 
 const routes = (
@@ -15,7 +16,7 @@ const routes = (
                 <Route path="/dashboard" component={AdminRoute}/>
                 <Route path="/gallery" component={MainGallery}/>
                 <Route path="/about" component={About}/>
-             {/*   <Route path="/contactform" component={ContactForm}/>*/}
+                <Route path="/contact" component={ContactForm}/>
             </Switch>
         </App>
     </Router>

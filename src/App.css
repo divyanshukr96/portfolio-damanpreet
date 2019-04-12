@@ -56,3 +56,25 @@
     transform: rotate(360deg);
   }
 }
+
+
+.bg {
+  background-image: url("images/DSC_1246.jpg");
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.mdbinputcolor{
+  text-decoration-color: red;
+  background-color:'white';
+}
+
+input[type=text]:focus:not([readonly]) + label {
+  color: green;
+}
+
+input[type=text]:focus:not([readonly]) {
+  border-bottom: 1px solid green;
+  box-shadow: 0 1px 0 0 green;
+}

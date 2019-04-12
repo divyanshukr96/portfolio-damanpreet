@@ -46,7 +46,12 @@ const Cover = (props) => (
 );
 
 const ParallaxEffect = (props) => {
+
+    console.log('prop parallax',props);
     const {cover, description} = props;
+    console.log('cover',cover);
+    console.log('description',description);
+
     return (
         <div>
             {!isEmpty(description) && <Description data={description}/>}

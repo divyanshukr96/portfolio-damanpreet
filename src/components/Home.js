@@ -6,9 +6,11 @@ import ImageAndData from './ImageAndData';
 import ParallaxEffect from './ParallaxEffect';
 import Footer from './Footer';
 import axios from 'axios';
+import Navbar from './Navbar';
 
 import LighboxPage from './LightBoxPage';
 import AppBar from "@material-ui/core/AppBar";
+
 
 class Home extends Component {
     constructor(props) {
@@ -21,6 +23,8 @@ class Home extends Component {
 
     componentWillMount() {
         axios.get('/api/home').then(res => {
+            //debug
+            console.log('thapli',res.data);
             this.setState({data: res.data})
         })
     }
@@ -33,7 +37,7 @@ class Home extends Component {
 
 
 
-                <Navbar />
+                <Navbar/>
 
                 <ImageSlider carousel={data.carousel}/>
 
