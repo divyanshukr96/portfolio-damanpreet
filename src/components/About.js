@@ -1,5 +1,4 @@
 import React from 'react';
-import Logo from './../images/hsnlogo1.png';
 import {MDBAnimation, MDBCol, MDBContainer, MDBMask, MDBRow, MDBView} from "mdbreact";
 import Harinder from "./../images/harinder.jpg";
 import HarinderWife from "./../images/harinderwife.jpg";

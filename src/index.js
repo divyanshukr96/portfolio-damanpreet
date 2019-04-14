@@ -6,14 +6,14 @@ import routes from "./routes/index"
 import store from "./store/configureStore";
 import Provider from "react-redux/es/components/Provider";
 import NetworkService from "./utils/networkService"
-import createHistory from 'history/createBrowserHistory';
+import {createBrowserHistory} from 'history';
 
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import 'bootstrap-css-only/css/bootstrap.min.css';
 import 'mdbreact/dist/css/mdb.css';
 
 
-const history = createHistory();
+const history = createBrowserHistory();
 NetworkService.setupInterceptors(store, history);
 ReactDOM.render(
     <Provider store={store}>

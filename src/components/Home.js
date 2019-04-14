@@ -9,7 +9,6 @@ import axios from 'axios';
 import Navbar from './Navbar';
 
 import LighboxPage from './LightBoxPage';
-import AppBar from "@material-ui/core/AppBar";
 
 
 class Home extends Component {
