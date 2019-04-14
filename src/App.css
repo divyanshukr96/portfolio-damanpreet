@@ -70,11 +70,4 @@
   background-color:'white';
 }
 
-input[type=text]:focus:not([readonly]) + label {
-  color: green;
-}
 
-input[type=text]:focus:not([readonly]) {
-  border-bottom: 1px solid green;
-  box-shadow: 0 1px 0 0 green;
-}

@@ -16,13 +16,10 @@ const FormPage = () => {
 
             <MDBRow>
                 <MDBCol md="4">
-                    <form style={{background:'rgba(0,142,201,.5)',padding:15}}>
+                    <form style={{background:'rgba(255,255,255,.8)',padding:15}}>
                         <p className="h1 text-center mb-4 cursive black-text">Write to us</p>
-                    <div>
-
-
+                    <div className="change">
                         <MDBInput
-                            className="mdbinputcolor"
                             label="Your name"
                             group
                             type="text"
@@ -66,17 +63,17 @@ const FormPage = () => {
                             success="right"
                         />
 
-                        <br/>
                         <MDBInput
+                            group
                             type="textarea"
-                            rows="1"
+                            rows="2"
                             outline
                             label="Tell me about your event"
                         />
                     </div>
                     <div className="text-center">
-                        <MDBBtn outline color="white">
-                            Send <MDBIcon far icon="paper-plane" color="white" className="ml-1" />
+                        <MDBBtn outline color="black">
+                            Send <MDBIcon far icon="paper-plane" color="black" className="ml-1" />
                         </MDBBtn>
                     </div>
                 </form>
