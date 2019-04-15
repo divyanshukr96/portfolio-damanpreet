@@ -4,7 +4,7 @@ import {setCurrentUser} from "../actions/authActions";
 if (process.env.NODE_ENV !== 'production') {
     // axios.defaults.baseURL = "http://10.1.130.32:81";
 
-     // axios.defaults.baseURL = "http://127.0.0.1:8080";
+      axios.defaults.baseURL = "http://172.20.3.65:8000";
     
     // axios.defaults.baseURL = "http://127.0.0.1:8000";
 }

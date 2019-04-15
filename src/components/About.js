@@ -63,12 +63,11 @@ const About = () => {
                             <blockquote className="blockquote bq-warning">
                                 <p className="bq-title">My vision</p>
                                 <p style={{textAlign:"justify"}}>
-
                                     Love, passion and care that a couple exhibits, the best way to show them in prewedding photography in which I take pride.
+                                    I’ve always loved taking pictures as far as I can remember. It’s one of the most simple ways of capturing emotion onto a frame.
+                                    I love helping people create new memories or restore old ones. Providing beautiful images along with exceptional service to my
+                                    clients is what drives me! I love the outdoors and photography makes you want to get out and see the world at different angles.
 
-                                    I live in Montreal, in the heart of downtown but my roots belong to India.
-
-                                    I got married to love of my life in 2018 and we are young and energetic couple who creates no boundaries on creativity.
                                 </p>
                             </blockquote>
                         </MDBAnimation>
@@ -77,10 +76,31 @@ const About = () => {
 
                         <MDBRow>
 
+                            <MDBAnimation reveal type="fadeInUp" duration="2s">
+
                             <blockquote className="blockquote">
-                                <p className="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-                                <footer className="blockquote-footer mb-3">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+                                <p style={{textAlign:"justify"}} className="mb-0">
+                                    I live in Montreal, in the heart of downtown but my roots belong to India.
+                                    I graduated from Concordia university with Industrial engineering degree however I always had a pull towards photography.
+                                    During undergrad, I have done professional pre-wedding photoshoots and landscapes.
+                                    In 2017, I decided to pursue a full-time career in photography.
+                                    I got married in 2018  to my better half Raman Nanrhay, who challenges me to be a better photographer every day.</p>
                             </blockquote>
+                            </MDBAnimation>
+
+                        </MDBRow>
+
+                        <MDBRow>
+
+                            <MDBAnimation reveal type="fadeInLeft" duration="2s">
+                            <blockquote className="blockquote">
+                                <p  className="mb-0 abouttext">
+                                    There is always something to learn in photography. I keep myself updated with new technology, technique or new hacks to try.
+                                    Crafting a story for my clients is what I was born to do!
+                                    I am excited about being part of your life!</p>
+                                <footer className="blockquote-footer mb-3">Harinder Singh <cite title="Source Title"></cite></footer>
+                            </blockquote>
+                            </MDBAnimation>
 
                         </MDBRow>
 
