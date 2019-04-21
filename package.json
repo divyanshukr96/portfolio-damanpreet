@@ -28,7 +28,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "react-scripts build && cd build && ren index.html page.blade.php",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

@@ -119,7 +119,7 @@ const About = () => {
                                     height={500}
                                 />
                                 <MDBMask className="flex-center">
-                                    <p className="white-text">zoom effect</p>
+                                    <p className="white-text"></p>
                                 </MDBMask>
                             </MDBView>
                         </MDBAnimation>

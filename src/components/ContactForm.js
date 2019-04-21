@@ -4,7 +4,7 @@ import {connect} from "react-redux";
 import {MDBContainer, MDBRow, MDBCol, MDBBtn, MDBIcon, MDBInput} from 'mdbreact';
 import {contact} from '../actions/contactActions';
 import {Typography} from "@material-ui/core";
-import {isEmpty} from "lodash";
+// import {isEmpty} from "lodash";
 
 class FormPage extends Component {
     state = {
@@ -15,12 +15,13 @@ class FormPage extends Component {
 
     handleChange = e => {
         const {name, value} = e.target;
-        this.setState(s => ({...s, formData: {[name]: value}}))
+        this.setState(s => ({...s, formData: {...s.formData, [name]: value}}))
     };
 
     handleSubmit = e => {
-        const {formData} = this.state;
+        const {formData,submitted} = this.state;
         e.preventDefault();
+        if(submitted) return null;
         this.setState({submitted: true});
         this.props.contact(formData).then(res => {
             if (res.response) return this.setState({formData: {}, errors: {}, submitted: false});
@@ -31,10 +32,10 @@ class FormPage extends Component {
     render() {
         const {formData, errors, submitted} = this.state;
 
-        const errList = [];
-        for (let d in errors) {
-            errList.push(errors[d]);
-        }
+        // const errList = [];
+        // for (let d in errors) {
+        //     errList.push(errors[d]);
+        // }
 
         return (
             <div className="bg">
@@ -53,12 +54,13 @@ class FormPage extends Component {
                                         label="Your name"
                                         group
                                         type="text"
-                                        validate
+                                        validate={false}
                                         error="wrong"
                                         success="right"
                                         value={formData.name}
                                         onChange={this.handleChange}
                                     />
+                                    {errors.name && <Typography color={"error"} variant={"caption"}>{errors.name}</Typography>}
                                     <MDBInput
                                         name={'email'}
                                         label="Your email"
@@ -70,7 +72,7 @@ class FormPage extends Component {
                                         value={formData.email}
                                         onChange={this.handleChange}
                                     />
-
+                                    {errors.email && <Typography color={"error"} variant={"caption"}>{errors.email}</Typography>}
                                     <MDBInput
                                         name={'where'}
                                         label="Where is your event ?"
@@ -82,7 +84,8 @@ class FormPage extends Component {
                                         value={formData.where}
                                         onChange={this.handleChange}
                                     />
-
+                                    {errors.where && <Typography color={"error"} variant={"caption"}>{errors.where}</Typography>}
+                                    <br/>
                                     <MDBInput
                                         name={'event_date'}
                                         label="When is your event ?"
@@ -94,7 +97,7 @@ class FormPage extends Component {
                                         value={formData.event_date}
                                         onChange={this.handleChange}
                                     />
-
+                                    {errors.event_date && <Typography color={"error"} variant={"caption"}>{errors.event_date}</Typography>}
                                     <MDBInput
                                         name={'how_find'}
                                         label="How did you find me?"
@@ -106,7 +109,7 @@ class FormPage extends Component {
                                         value={formData.how_find}
                                         onChange={this.handleChange}
                                     />
-
+                                    {errors.how_find && <Typography color={"error"} variant={"caption"}>{errors.how_find}</Typography>}
                                     <MDBInput
                                         name={'about'}
                                         group
@@ -118,9 +121,10 @@ class FormPage extends Component {
                                         onChange={this.handleChange}
                                     />
                                 </div>
-                                {!isEmpty(errors) && errList.map((data, index) => (
+                                {errors.about && <Typography color={"error"} variant={"caption"}>{errors.about}</Typography>}
+                                {/* {!isEmpty(errors) && errList.map((data, index) => (
                                     <Typography color={"error"} key={index} variant={"caption"}>{data}</Typography>
-                                ))}
+                                ))} */}
                                 <div className="text-center">
                                     <MDBBtn outline color="black" type="submit" disabled={submitted}>
                                         Send <MDBIcon far icon="paper-plane" color="black" className="ml-1"/>

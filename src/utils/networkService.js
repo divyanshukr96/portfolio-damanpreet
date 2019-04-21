@@ -20,6 +20,9 @@ export default {
                     store.dispatch(setCurrentUser({}));
                     console.log("Unauthorized");
                     break;
+                case 409:
+                    window.location.reload(true);
+                    break;
                 // case 404:
                 //     history.push('/not-found');
                 //     break;
