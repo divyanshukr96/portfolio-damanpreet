@@ -14,7 +14,7 @@ const About = () => {
                 <MDBRow>
                     <MDBCol md="6" lg="6">
                         <MDBAnimation type="fadeInUp" duration="2s">
-                            <MDBView hover zoom className="imagelanding">
+                            <MDBView hover zoom className="">
                                 <img
                                     src={Harinder}
                                     alt=""
@@ -110,13 +110,13 @@ const About = () => {
                     <MDBCol lg="6" md="6" className="mb-4">
 
                         <MDBAnimation reveal type="fadeInRight" duration="2s">
-                            <MDBView hover zoom className="imagelanding">
+                            <MDBView hover zoom className="">
                                 <img
                                     src={HarinderWife}
                                     className="img-fluid"
                                     alt=""
                                     width={600}
-                                    height={500}
+                                    height={300}
                                 />
                                 <MDBMask className="flex-center">
                                     <p className="white-text"></p>

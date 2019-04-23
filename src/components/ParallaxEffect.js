@@ -28,9 +28,11 @@ const Cover = (props) => (
                     color: 'white',
                     position: 'absolute',
                     background: `rgba(0, 0, 0, ${percentage * 1})`,
-                    left: '50%',
+                    right: 0,
                     bottom: '10%',
+                    transform: 'translateX(-5%)',
                     width: percentage * 500 + 350,
+                    maxWidth: '100%',
                     overflow: 'hidden',
                 }}
             >
@@ -41,7 +43,7 @@ const Cover = (props) => (
 
         )}
     >
-        <div style={{height: 500}}/>
+        <div style={{height: '65vh'}}/>
     </Parallax>
 );
 

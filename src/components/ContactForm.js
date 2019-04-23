@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import * as PropTypes from "prop-types";
 import {connect} from "react-redux";
+import {Redirect} from 'react-router-dom';
 import {MDBContainer, MDBRow, MDBCol, MDBBtn, MDBIcon, MDBInput} from 'mdbreact';
 import {contact} from '../actions/contactActions';
 import {Typography} from "@material-ui/core";
@@ -24,7 +25,12 @@ class FormPage extends Component {
         if(submitted) return null;
         this.setState({submitted: true});
         this.props.contact(formData).then(res => {
-            if (res.response) return this.setState({formData: {}, errors: {}, submitted: false});
+            if (res.response) {
+                setTimeout(() => (
+                    <Redirect to={"/contact"}/>
+                ),1000);
+                return this.setState({formData: {}, errors: {}, submitted: false});
+            }
             return this.setState({errors: res.errors, submitted: false});
         })
     };
