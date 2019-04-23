@@ -44,11 +44,13 @@ class LightboxPage extends React.Component {
                         doloremque!
                         Sit, rem, in?
                     </p>
-                    <MDBBtn className="buttonright" outline color="primary">
-                        <Link to={'/gallery'}>
+                    
+                    <Link to={'/gallery'}>
+                        <MDBBtn className="buttonright" outline color="primary">
                             View Complete Gallery
-                        </Link>
-                    </MDBBtn>
+                        </MDBBtn>
+                    </Link>
+                    
                 </blockquote>
                 <div className="mdb-lightbox">
                     <MDBRow>

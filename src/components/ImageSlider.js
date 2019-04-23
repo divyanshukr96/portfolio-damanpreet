@@ -11,8 +11,6 @@ class ImageSlider extends Component {
 
         let images = [];
         const {carousel} = this.props;
-        //debug
-        console.log('carousel',carousel);
         if (!isEmpty(carousel)) {
             for (const d in carousel) images.push({original: `/image/${carousel[d].name}`});
         }

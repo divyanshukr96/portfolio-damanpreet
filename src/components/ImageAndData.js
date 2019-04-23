@@ -11,7 +11,7 @@ const ImageAndData = (props) => {
                 <MDBRow key={index} style={{alignItems: 'center', flexDirection: index % 2 ? 'row-reverse' : 'row'}}>
                     <MDBCol md="6" lg="6">
                         <MDBAnimation reveal type={index % 2 ? 'fadeInRight' : 'fadeInUp'} duration="2s">
-                            <MDBView hover zoom className="imagelanding">
+                            <MDBView hover zoom className="">
                                 <img
                                     src={`/image/${data.photo}`}
                                     className="img-fluid"

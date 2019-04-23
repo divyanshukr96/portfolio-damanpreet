@@ -22,8 +22,6 @@ class Home extends Component {
 
     componentWillMount() {
         axios.get('/api/home').then(res => {
-            //debug
-            console.log('thapli',res.data);
             this.setState({data: res.data})
         })
     }
