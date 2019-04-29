@@ -9,8 +9,8 @@ const Description = (props) => (
         bgImage={`/image/${props.data.photo}`}
         bgImageAlt="the car"
         strength={1000}
-    >
-        <div style={{height: '700px', maxWidth: 1280, margin: 'auto'}}>
+   >
+        <div style={{height: '100vh', maxWidth: 1280, margin: 'auto'}}>
             <p style={{color: 'white', marginTop: '400px', fontFamily: 'courier', fontSize: '150%'}}>
                 {props.data.description}
             </p>
