@@ -92,8 +92,13 @@
     .backicon {
         left: 3vh;
     }
+
+    .imageRoot {
+        margin-top: 1rem !important;
+    }
 }
 
 .imageRoot {
+    margin-top: 2.5rem;
     padding: 0 !important;
 }

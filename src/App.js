@@ -3,10 +3,13 @@ import {MuiThemeProvider, createMuiTheme} from '@material-ui/core/styles';
 import CssBaseline from "@material-ui/core/es/CssBaseline/CssBaseline";
 import FlashMessage from "./components/flashMessage/FlashMessage";
 
-
 const theme = createMuiTheme({
     palette: {
-        // type: 'light',
+        primary: {
+            main: '#e0ad5c',
+
+        },
+
     },
     typography: {
         useNextVariants: true,

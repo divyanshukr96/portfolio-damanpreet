@@ -1,6 +1,6 @@
-import React from 'react';
+import React, {Component} from 'react';
 import * as PropTypes from 'prop-types';
-import {withStyles} from '@material-ui/core/styles';
+import {withStyles} from '@material-ui/core';
 import AppBar from '@material-ui/core/AppBar';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
@@ -25,7 +25,8 @@ const styles = theme => ({
     root: {
         // backgroundColor: theme.palette.background.paper,
         // width: 500,
-        minHeight: '59vh'
+        minHeight: '59vh',
+        flexGrow: 1,
     },
     tab: {
         fontFamily: "'Dancing Script', cursive",
@@ -43,7 +44,7 @@ const styles = theme => ({
     },
 });
 
-class FullWidthTabs extends React.Component {
+class GalleryTab extends Component {
     state = {
         value: 'all',
         images: {},
@@ -60,7 +61,7 @@ class FullWidthTabs extends React.Component {
     }
 
     render() {
-        const {classes, theme} = this.props;
+        const {classes} = this.props;
         const {images, value} = this.state;
         const imageKey = Object.keys(images);
         return (
@@ -89,19 +90,18 @@ class FullWidthTabs extends React.Component {
                             </Tabs>
                         </AppBar>
 
-                        <TabContainer dir={theme.direction}>
+                        <div style={{paddingTop: 8}}>
                             {images[value] ? (<ImagesView images={images[value].images}/>) : null}
-                        </TabContainer>
+                        </div>
                     </>
                 )}
             </div>
-        );
+        )
     }
 }
 
-FullWidthTabs.propTypes = {
+GalleryTab.propTypes = {
     classes: PropTypes.object.isRequired,
-    theme: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles, {withTheme: true})(FullWidthTabs);
+export default withStyles(styles)(GalleryTab);
