@@ -48,8 +48,10 @@ class MainGallery extends React.Component {
 
                     <h1 className="cursive my-8 text-center">My Gallery</h1>
                     <br/>
+                    <div style={{display: 'flex', justifyContent: 'center'}}>
+                        <GalleryTab className="center"/>
+                    </div>
 
-                     <GalleryTab className="center"/>
 
                     <div className="mdb-lightbox">
                         <MDBRow>
