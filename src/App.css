@@ -22,17 +22,22 @@
 .cursive {
     font-family: 'Dancing Script', cursive;
     color: #e0ad5c;
+    /*line-height: 160px;*/
 }
 
-.bar {
+.barOuter, .bar {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    z-index: 100;
+    color: #e0ad5c;
+}
+
+.bar {
     align-items: center;
     position: absolute;
     width: 100%;
-    z-index: 100;
-    color: #e0ad5c;
+    margin-top: 60px;
 }
 
 .bar .h1 {
@@ -88,7 +93,44 @@
     left: 12vh;
 }
 
+.logo {
+    position: absolute;
+    top: 24px;
+    z-index: 100;
+}
+
+.imageRoot {
+    margin-top: 2.5rem;
+    padding: 0 !important;
+}
+
+@media only screen and (max-width: 1200px) {
+    .logo {
+        max-width: 200px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .bar {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        background: white;
+        padding: 16px;
+        margin-top: unset;
+    }
+    .bar.mobile{
+        display: none;
+        /*transition: opacity 1s ease-out;*/
+        /*opacity: 0;*/
+    }
+}
+
 @media only screen and (max-width: 600px) {
+    .bar a {
+        z-index: 200;
+    }
+
     .backicon {
         left: 3vh;
     }
@@ -96,9 +138,8 @@
     .imageRoot {
         margin-top: 1rem !important;
     }
-}
 
-.imageRoot {
-    margin-top: 2.5rem;
-    padding: 0 !important;
+    .logo {
+        max-width: 160px;
+    }
 }
