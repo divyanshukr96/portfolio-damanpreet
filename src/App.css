@@ -1,87 +1,99 @@
 .App {
-  text-align: center;
+    text-align: center;
 }
 
 .App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+    animation: App-logo-spin infinite 20s linear;
+    height: 40vmin;
+    pointer-events: none;
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
 }
 
-.cursive{
-  font-family: 'Dancing Script', cursive;
-  color: #e0ad5c;
+.cursive {
+    font-family: 'Dancing Script', cursive;
+    color: #e0ad5c;
 }
 
-.bar{
-  display:flex;
-  flex-direction:row;
-  justify-content: space-around;
-  align-items:center;
-  position:absolute;
-  width:100%;
-  z-index: 100;
-  color: #e0ad5c;
+.bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    z-index: 100;
+    color: #e0ad5c;
 }
 
-.bar .h1{
-  color: #e0ad5c;
-  text-decoration-color: #e0ad5c;
+.bar .h1 {
+    color: #e0ad5c;
+    text-decoration-color: #e0ad5c;
 }
 
-.buttonright{
-  alignment: right;
+.buttonright {
+    alignment: right;
 }
 
 .App-link {
-  color: #61dafb;
+    color: #61dafb;
 }
 
 @keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 
 .bg {
-  background-image: url("images/DSC_1246.jpg");
-  height: 100vh;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-.mdbinputcolor{
-  text-decoration-color: red;
-  background-color:'white';
+    background-image: url("images/DSC_1246.jpg");
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-.abouttext{
-  padding:10px;
-  text-align: justify;
+.mdbinputcolor {
+    text-decoration-color: red;
+    background-color: 'white';
+}
+
+.abouttext {
+    padding: 10px;
+    text-align: justify;
 }
 
 
-.change > div, .change > div > input{
-  margin-bottom: 0 !important;
+.change > div, .change > div > input {
+    margin-bottom: 0 !important;
 }
-.backicon{
-  color: #e0ad5c;
-  position:relative;
-  top:12vh;
-  left:12vh;
+
+.backicon {
+    color: #e0ad5c;
+    position: absolute;
+    margin-top: 10px;
+    left: 12vh;
+}
+
+@media only screen and (max-width: 600px) {
+    .backicon {
+        left: 3vh;
+    }
+}
+
+.imageRoot {
+    padding: 0 !important;
 }
