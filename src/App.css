@@ -25,6 +25,10 @@
     /*line-height: 160px;*/
 }
 
+.afterNav {
+    margin-top: 180px;
+}
+
 .barOuter, .bar {
     display: flex;
     flex-direction: row;
@@ -111,6 +115,10 @@
 }
 
 @media only screen and (max-width: 800px) {
+    .afterNav {
+        margin-top: 160px;
+    }
+
     .bar {
         display: flex;
         flex-direction: column;
@@ -119,7 +127,8 @@
         padding: 16px;
         margin-top: unset;
     }
-    .bar.mobile{
+
+    .bar.mobile {
         display: none;
         /*transition: opacity 1s ease-out;*/
         /*opacity: 0;*/
@@ -127,6 +136,10 @@
 }
 
 @media only screen and (max-width: 600px) {
+    .afterNav {
+        margin-top: 130px;
+    }
+
     .bar a {
         z-index: 200;
     }
