@@ -21,31 +21,31 @@ const Footer = () => {
                                 <Link to={'/gallery'}> Gallery </Link>
                             </h6>
                         </MDBCol>
+                        {/*<MDBCol md="2" className="b-3">*/}
+                        {/*    <h6 className="title font-weight-bold">*/}
+                        {/*        <a href="#!">Find Us</a>*/}
+                        {/*    </h6>*/}
+                        {/*</MDBCol>*/}
+                        {/*<MDBCol md="2" className="b-3">*/}
+                        {/*    <h6 className="title font-weight-bold">*/}
+                        {/*        <a href="#!">Help</a>*/}
+                        {/*    </h6>*/}
+                        {/*</MDBCol>*/}
                         <MDBCol md="2" className="b-3">
                             <h6 className="title font-weight-bold">
-                                <a href="#!">Find Us</a>
-                            </h6>
-                        </MDBCol>
-                        <MDBCol md="2" className="b-3">
-                            <h6 className="title font-weight-bold">
-                                <a href="#!">Help</a>
-                            </h6>
-                        </MDBCol>
-                        <MDBCol md="2" className="b-3">
-                            <h6 className="title font-weight-bold">
-                                <a href="#!">Contact</a>
+                                <Link to={"/contact"}>Contact</Link>
                             </h6>
                         </MDBCol>
                     </MDBRow>
-                    <hr className="rgba-white-light" style={{ margin: "0 15%" }} />
+                    <hr className="rgba-white-light" style={{margin: "0 15%"}}/>
                     <MDBRow className="d-flex text-center justify-content-center mb-md-0 mb-4">
                         <MDBCol md="8" sm="12" className="mt-5">
-                            <p style={{ lineHeight: "1.7rem" }}>
+                            <p style={{lineHeight: "1.7rem"}}>
 
                             </p>
                         </MDBCol>
                     </MDBRow>
-                    <hr className="clearfix d-md-none rgba-white-light" style={{ margin: "10% 15% 5%" }} />
+                    <hr className="clearfix d-md-none rgba-white-light" style={{margin: "10% 15% 5%"}}/>
                     <MDBRow className="pb-3">
                         <MDBCol md="12">
                             <div className="mb-5 flex-center">
@@ -77,8 +77,7 @@ const Footer = () => {
                 </MDBContainer>
                 <div className="footer-copyright text-center py-3">
                     <MDBContainer fluid>
-                        &copy; {new Date().getFullYear()} Copyright:
-                        <a href="/"> hsnphotos.com </a>
+                        &copy; {new Date().getFullYear()} Copyright: <a href="/"> www.hsnphotos.com </a>
                     </MDBContainer>
                 </div>
             </MDBFooter>

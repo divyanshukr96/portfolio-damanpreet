@@ -4,18 +4,18 @@ import * as PropTypes from "prop-types";
 import {isEmpty} from "lodash";
 
 const Description = (props) => (
-    <Parallax
-        blur={{min: 0, max: 10}}
-        bgImage={`/image/${props.data.photo}`}
-        bgImageAlt="the car"
-        strength={1000}
-   >
-        <div style={{height: '100vh', maxWidth: 1280, margin: 'auto'}}>
-            <p style={{color: 'white', marginTop: '400px', fontFamily: 'courier', fontSize: '150%'}}>
-                {props.data.description}
-            </p>
-        </div>
-    </Parallax>
+    <div style={{maxHeight: '90vh', overflow: 'hidden'}}>
+        <Parallax
+            blur={{min: 0, max: 10}}
+            bgImage={`/image/${props.data.photo}`}
+            bgImageAlt="the car"
+            strength={1000}
+        >
+            <div className="description">
+                <p>{props.data.description}</p>
+            </div>
+        </Parallax>
+    </div>
 );
 
 const Cover = (props) => (

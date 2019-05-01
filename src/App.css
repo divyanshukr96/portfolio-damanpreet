@@ -68,8 +68,10 @@
 
 
 .bg {
+    position: absolute;
+    min-height: 100vh;
+    width: 100%;
     background-image: url("images/DSC_1246.jpg");
-    height: 100vh;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -106,6 +108,23 @@
 .imageRoot {
     margin-top: 2.5rem;
     padding: 0 !important;
+}
+
+.description {
+    display: flex;
+    align-items: center;
+    height: 90vh;
+    max-width: 1280px;
+    margin: auto;
+    padding: 16px;
+}
+
+.description p {
+    color: white;
+    max-height: 100%;
+    overflow: hidden;
+    font-family: 'courier', serif;
+    font-size: 120%;
 }
 
 @media only screen and (max-width: 1200px) {

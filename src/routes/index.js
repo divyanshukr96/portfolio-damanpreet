@@ -4,7 +4,7 @@ import App from "../App";
 import Home from "../components/Home";
 import MainGallery from '../components/MainGallery';
 import About from '../components/About';
-import ContactForm from '../components/ContactForm';
+import ContactUs from "../components/ContactUs";
 
 
 const routes = (
@@ -14,7 +14,7 @@ const routes = (
                 <Route exact path="/" component={Home}/>
                 <Route path="/gallery" component={MainGallery}/>
                 <Route path="/about" component={About}/>
-                <Route path="/contact" component={ContactForm}/>
+                <Route path="/contact" component={ContactUs}/>
             </Switch>
         </App>
     </Router>
