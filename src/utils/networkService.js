@@ -1,11 +1,12 @@
 import axios from "axios";
 import {setCurrentUser} from "../actions/authActions";
+import {addFlashMessage} from "../actions/flashMessageActions";
 
 if (process.env.NODE_ENV !== 'production') {
     // axios.defaults.baseURL = "http://10.1.130.32:81";
 
-      axios.defaults.baseURL = "http://127.0.0.1:8000";
-    
+    axios.defaults.baseURL = "http://127.0.0.1:8000";
+
     // axios.defaults.baseURL = "http://127.0.0.1:8000";
 }
 
@@ -21,7 +22,11 @@ export default {
                     console.log("Unauthorized");
                     break;
                 case 409:
-                    window.location.reload(true);
+                    store.dispatch(addFlashMessage({
+                        message: 'Form Submission failed !!',
+                        options: {variant: 'warning'}
+                    }));
+                    setTimeout(() => window.location.reload(true), 3000);
                     break;
                 // case 404:
                 //     history.push('/not-found');
